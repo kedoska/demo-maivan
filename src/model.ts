@@ -27,6 +27,5 @@ export interface Model {
   getLocation(name: string, segment: FilterType): Promise<Location | undefined>
   updateCases(name: string, cases: number, epoch: number): Promise<void>
   incidenceBetweenDates(name: string, segment: FilterType, fromEpoch: number, toEpoch: number): Promise<Report>
-  // incidenceByDate(name: string, segment: FilterType, epoch: number): Promise<Report>
   getCases(name: string, fromEpoch: number, toEpoch: number, region?: string): Promise<number>
 }

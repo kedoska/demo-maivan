@@ -72,39 +72,6 @@ export default (initialState?: Storage): Model => {
         incidenceRate,
       }
     },
-    // incidenceByDate: async (name: string, segment: FilterType, epoch: number) => {
-    //   const locations = storage.locations.filter(filterBy(segment, name))
-    //   if (!locations.length) {
-    //     throw new Error(`${segment} ${name} not found`)
-    //   }
-
-    //   const entries = storage.entries.filter(
-    //     (entry) =>
-    //       entry.epoch === epoch && locations.map((x) => x.city).includes(entry.city),
-    //   )
-
-    //   const population = locations.reduce((acc, { population }) => acc + population, 0)
-    //   const totalDays = entries.reduce((acc, { epoch }) => {
-    //     if (acc.includes(epoch)) {
-    //       return acc
-    //     }
-    //     return [...acc, epoch]
-    //   }, []).length
-    //   const totalCases = entries.reduce((acc, entry) => acc + entry.cases, 0)
-    //   const incidenceRate = (totalCases / population) * 100000
-    //   const location = {
-    //     ...locations[0],
-    //     population,
-    //   }
-    //   return {
-    //     location,
-    //     fromEpoch: epoch,
-    //     toEpoch: epoch,
-    //     totalDays,
-    //     totalCases,
-    //     incidenceRate,
-    //   }
-    // },
     getCases: async (name: string, fromEpoch: number, toEpoch: number, region?: string) => {
       throw new Error('Not implemented')
     },

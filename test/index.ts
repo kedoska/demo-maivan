@@ -1,7 +1,6 @@
 import {
   addCityNoRegion,
   getCasesBetweenDates,
-  // getCasesByCity,
   getLocationByRegion,
   updateCases,
 } from './voltatile.spec'
@@ -16,7 +15,6 @@ void (async () => {
   addTest('addCityNoRegion', addCityNoRegion)
   addTest('getLocationByRegion', getLocationByRegion)
   addTest('updateCases', updateCases)
-  // addTest('getCasesByCity', getCasesByCity)
   addTest('getCasesBetweenDates', getCasesBetweenDates)
 
   for (const test of tests) {
